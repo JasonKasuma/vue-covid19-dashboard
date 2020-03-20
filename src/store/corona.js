@@ -16,7 +16,7 @@ const corona = {
   },
   actions: {
     get_data_all_corona({ state, commit }) {
-      axios
+      return axios
         .get(`${state.url}/corona/all`, { crossdomain: true })
         .then(response => {
           commit("update", ["data_corona", response.data]);
